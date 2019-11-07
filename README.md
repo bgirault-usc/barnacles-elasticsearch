@@ -3,7 +3,6 @@ barnacles-elasticsearch
 
 [Elasticsearch](https://www.elastic.co/products/elasticsearch) interface for [barnacles](https://github.com/reelyactive/barnacles/) open source software.  We believe in an open Internet of Things.
 
-
 Installation
 ------------
 
@@ -37,14 +36,42 @@ __barnacles-elasticsearch__ supports the following options:
 |:--------------|:--------------------------|:-------------------------------|
 | node          | "http://localhost:9200"   | Elasticsearch node             |
 | client        | null                      | An instantiated Elasticsearch client |
-| printErrors   | false                     | Print errors to the console (for debug) |
+| printErrors   | true                      | Print errors to the console (for debug) |
 | raddecOptions | { includePackets: false } | See [raddec](https://github.com/reelyactive/raddec/) toFlattened() options |
+| index         | "raddec"                  | Elasticsearch index name       |
+| esBulkSize    | 100                       | Number of raddecs sent at once to Elasticsearch cluster |
 
 By default __barnacles-elasticsearch__ will connect and write to localhost:9200.
 
 
 License
 -------
+
+SPDX-License-Identifier: (MIT AND GPL-2.0-only)
+
+### bgirault-usc/barnacles-elasticsearch fork for bulk upload.
+
+GPL v2
+
+Copyright (C) 2019 Benjamin Girault - University of Southern California
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; version 2.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+
+
+### reelyactive/barnacles-elasticsearch base repository code
 
 MIT License
 
